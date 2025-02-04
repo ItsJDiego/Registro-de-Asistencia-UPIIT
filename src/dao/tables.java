@@ -47,7 +47,7 @@ public class tables {
     }
     
     private static boolean tableExists(Statement st, String tableName) throws Exception {
-        ResultSet resultSet = st.executeQuery("SHOW TABLES LIKE '" + TABLEnAME + "'");
+        ResultSet resultSet = st.executeQuery("SHOW TABLES LIKE '" + tableName + "'");
         return resultSet.next();
     }
 }

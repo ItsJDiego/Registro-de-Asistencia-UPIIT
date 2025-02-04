@@ -4,6 +4,10 @@
  */
 package forms;
 
+import java.awt.Color;
+import javax.swing.BorderFactory;
+import utility.BDUtility;
+
 /**
  *
  * @author User_Asus
@@ -15,6 +19,9 @@ public class Dashboard extends javax.swing.JFrame {
      */
     public Dashboard() {
         initComponents();
+        BDUtility.setImage(this, "images/download", 1366, 768);
+        this.getRootPane().setBorder(BorderFactory.createMatteBorder(4,4,4,4,Color.BLACK));
+        
     }
 
     /**
@@ -26,21 +33,145 @@ public class Dashboard extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnExit = new javax.swing.JButton();
+        btnViewUser = new javax.swing.JButton();
+        btnRegisterUser = new javax.swing.JButton();
+        btnUpdateUser = new javax.swing.JButton();
+        btnDeleteUser = new javax.swing.JButton();
+        btnViewQrs = new javax.swing.JButton();
+        btnViewAttendance = new javax.swing.JButton();
+        btnGenerateQr = new javax.swing.JButton();
+        btnMarkAttendance = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(1366, 768));
+        setMinimumSize(new java.awt.Dimension(1366, 768));
+        setUndecorated(true);
+
+        btnExit.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnExit.setText("x");
+        btnExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExitActionPerformed(evt);
+            }
+        });
+
+        btnViewUser.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnViewUser.setText("Observar usuario");
+        btnViewUser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewUserActionPerformed(evt);
+            }
+        });
+
+        btnRegisterUser.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnRegisterUser.setText("Registrar Usuario");
+        btnRegisterUser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegisterUserActionPerformed(evt);
+            }
+        });
+
+        btnUpdateUser.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnUpdateUser.setText("Actualizar usuario");
+        btnUpdateUser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpdateUserActionPerformed(evt);
+            }
+        });
+
+        btnDeleteUser.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnDeleteUser.setText("Borrar usuario");
+        btnDeleteUser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteUserActionPerformed(evt);
+            }
+        });
+
+        btnViewQrs.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnViewQrs.setText("Observar Qrs");
+
+        btnViewAttendance.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnViewAttendance.setText("Observar Asistencia");
+
+        btnGenerateQr.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnGenerateQr.setText("Generar Qr");
+
+        btnMarkAttendance.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnMarkAttendance.setText("Marcar Asistencia");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(btnRegisterUser)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnViewUser)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnUpdateUser)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnDeleteUser)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnGenerateQr)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnViewQrs)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnMarkAttendance)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnViewAttendance)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
+                .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(15, 15, 15))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnRegisterUser)
+                            .addComponent(btnViewUser)
+                            .addComponent(btnUpdateUser)
+                            .addComponent(btnDeleteUser)
+                            .addComponent(btnGenerateQr)
+                            .addComponent(btnViewQrs)
+                            .addComponent(btnMarkAttendance)
+                            .addComponent(btnViewAttendance)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(717, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_btnExitActionPerformed
+
+    private void btnViewUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewUserActionPerformed
+        // TODO add your handling code here:
+        BDUtility.openForm(ViewUser.class.getSimpleName(), new ViewUser());
+    }//GEN-LAST:event_btnViewUserActionPerformed
+
+    private void btnRegisterUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterUserActionPerformed
+        // TODO add your handling code here:
+        BDUtility.openForm(UserRegistration.class.getSimpleName(), new UserRegistration());
+    }//GEN-LAST:event_btnRegisterUserActionPerformed
+
+    private void btnUpdateUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateUserActionPerformed
+        // TODO add your handling code here:
+        BDUtility.openForm(UpdateUser.class.getSimpleName(), new UpdateUser());
+    }//GEN-LAST:event_btnUpdateUserActionPerformed
+
+    private void btnDeleteUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteUserActionPerformed
+        // TODO add your handling code here:
+        BDUtility.openForm(DeleteUser.class.getSimpleName(), new DeleteUser());
+    }//GEN-LAST:event_btnDeleteUserActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +209,14 @@ public class Dashboard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnDeleteUser;
+    private javax.swing.JButton btnExit;
+    private javax.swing.JButton btnGenerateQr;
+    private javax.swing.JButton btnMarkAttendance;
+    private javax.swing.JButton btnRegisterUser;
+    private javax.swing.JButton btnUpdateUser;
+    private javax.swing.JButton btnViewAttendance;
+    private javax.swing.JButton btnViewQrs;
+    private javax.swing.JButton btnViewUser;
     // End of variables declaration//GEN-END:variables
 }
