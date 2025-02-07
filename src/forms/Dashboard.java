@@ -44,7 +44,7 @@ public class Dashboard extends javax.swing.JFrame {
         btnMarkAttendance = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1366, 768));
+        setBackground(new java.awt.Color(240, 240, 240));
         setMinimumSize(new java.awt.Dimension(1366, 768));
         setUndecorated(true);
 
@@ -90,15 +90,35 @@ public class Dashboard extends javax.swing.JFrame {
 
         btnViewQrs.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnViewQrs.setText("Observar Qrs");
+        btnViewQrs.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewQrsActionPerformed(evt);
+            }
+        });
 
         btnViewAttendance.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnViewAttendance.setText("Observar Asistencia");
+        btnViewAttendance.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewAttendanceActionPerformed(evt);
+            }
+        });
 
         btnGenerateQr.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnGenerateQr.setText("Generar Qr");
+        btnGenerateQr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGenerateQrActionPerformed(evt);
+            }
+        });
 
         btnMarkAttendance.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnMarkAttendance.setText("Marcar Asistencia");
+        btnMarkAttendance.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMarkAttendanceActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -147,6 +167,7 @@ public class Dashboard extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
@@ -172,6 +193,22 @@ public class Dashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
         BDUtility.openForm(DeleteUser.class.getSimpleName(), new DeleteUser());
     }//GEN-LAST:event_btnDeleteUserActionPerformed
+
+    private void btnGenerateQrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenerateQrActionPerformed
+        BDUtility.openForm(GenerateQr.class.getSimpleName(), new GenerateQr());
+    }//GEN-LAST:event_btnGenerateQrActionPerformed
+
+    private void btnViewQrsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewQrsActionPerformed
+        BDUtility.openForm(ViewQrs.class.getSimpleName(), new ViewQrs());
+    }//GEN-LAST:event_btnViewQrsActionPerformed
+
+    private void btnMarkAttendanceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMarkAttendanceActionPerformed
+        BDUtility.openForm(MarkAttendance.class.getSimpleName(), new MarkAttendance());
+    }//GEN-LAST:event_btnMarkAttendanceActionPerformed
+
+    private void btnViewAttendanceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewAttendanceActionPerformed
+        BDUtility.openForm(ViewAttendance.class.getSimpleName(), new ViewAttendance());
+    }//GEN-LAST:event_btnViewAttendanceActionPerformed
 
     /**
      * @param args the command line arguments
